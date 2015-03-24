@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.netbug.speechcalc.MainActivity" >
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hello"
+        android:onClick="requestSpeech"
+        android:text="@string/text1" />
+
+    <ToggleButton
+        android:id="@+id/languageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_ok"
+        android:onClick="onToggleClicked"
+        android:textOff="@string/lang_en"
+        android:textOn="@string/lang_ru" />
+
+    <TextView
+        android:id="@+id/txtSpeechInput"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/languageButton"
+        android:background="@android:color/white"
+        android:text="Please press `Speak` and tell an expression..."
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="normal" />
+
+</RelativeLayout>
